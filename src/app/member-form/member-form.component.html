@@ -1,0 +1,20 @@
+<form [formGroup] = 'form' (ngSubmit)="OnSubmit()">
+    <mat-form-field>
+  
+    <input matInput placeholder="cin" formControlName="cin">
+  </mat-form-field><br>
+  <mat-form-field>
+    
+    <input matInput placeholder="name" formControlName="name">
+  </mat-form-field><br>
+  <mat-form-field>
+   
+    <input matInput placeholder="cv" formControlName="cv">
+  </mat-form-field><br>
+  <mat-form-field>
+    
+    <input matInput placeholder="type" formControlName="type">
+  </mat-form-field>
+  <button mat-button>Submit</button>
+ 
+</form>
