@@ -11,12 +11,20 @@ import { MemberFormComponent } from './member-form/member-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
+import { ConfirmDialogModule } from './confirm-dialog.module';
+import { LayoutComponent } from './layout/layout.component';
+import { FirebaseModule } from './firebase.module';
+import { LoginComponentComponent } from './login-component/login-component.component';
+import { AuthService } from 'src/Services/AuthService';
 
 @NgModule({
   declarations: [
     AppComponent,
     MemberListComponent,
-    MemberFormComponent
+    MemberFormComponent,
+    LayoutComponent,
+    LoginComponentComponent,
+   
   ],
   imports: [
     MaterialModule,
@@ -28,9 +36,11 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule,
     FlexLayoutModule,
-    HttpClientModule
+    HttpClientModule,
+    ConfirmDialogModule,
+    FirebaseModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
